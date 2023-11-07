@@ -5,6 +5,8 @@ const Container = styled.div`
   width: 100vw;
   height: 100vh;
   position: fixed;
+  left: 0;
+  top: 0;
   display: grid;
   place-items: center;
   z-index: 10;
@@ -12,16 +14,14 @@ const Container = styled.div`
 `;
 
 const Loading = styled.h1`
-  color: #000000;
+  color: beige;
 `;
 
 const Loader = () => {
-  const { progress, active } = useProgress();
+  const { progress } = useProgress();
   return (
-    <Html>
-      <Container>
-        <Loading>Loading... ({parseInt(progress)}%)</Loading>
-      </Container>
+    <Html wrapperClass="container" center>
+      <Loading>Loading... ({parseInt(progress)}%)</Loading>
     </Html>
   );
 };

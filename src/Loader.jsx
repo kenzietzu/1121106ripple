@@ -21,7 +21,7 @@ const Loader = () => {
   const { progress } = useProgress();
   return (
     <Html wrapperClass="container" center>
-      <Loading>Loading... ({parseInt(progress)}%)</Loading>
+      <Loading>Loading.. ({parseInt(progress)}%)</Loading>
     </Html>
   );
 };

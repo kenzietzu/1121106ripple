@@ -5,6 +5,7 @@ import { NoToneMapping } from "three";
 import Images from "./components/Images";
 import Effect from "./Effect";
 import GlobalStyles from "./GlobalStyles";
+import Loader from "./Loader";
 import store from "./store";
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
     <>
       <GlobalStyles />
       <Canvas gl={{ antialias: true, toneMapping: NoToneMapping }} linear>
-        <Suspense fallback={null}>
+        <Suspense fallback={<Loader />}>
           <ScrollControls pages={8}>
             <Scroll>
               <Images />

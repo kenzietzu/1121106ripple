@@ -24,6 +24,6 @@ export default class RippleEffect extends Effect {
     });
   }
   update(_renderer, _inputBuffer, deltaTime) {
-    this.uniforms.get("u_time").value += deltaTime;
+    this.uniforms.get("u_time").value += deltaTime * 1.5;
   }
 }
